@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <!--<router-view></router-view>-->
 
     <!--&lt;!&ndash;配置路由-步骤4-也可以设置路由导航作为路由出口&ndash;&gt;-->
     <!--&lt;!&ndash;使用<router-link>作为路由导航.有to表示到哪个路径下&ndash;&gt;-->
@@ -15,6 +15,9 @@
     <!--&lt;!&ndash; <router-view></router-view>,就是路由出口&ndash;&gt;-->
     <!--&lt;!&ndash;不配置路由出口，即使配置了路由链接导航，也导航不到路由路径下&ndash;&gt;-->
     <!--<router-view></router-view>-->
+
+    <!--3.使用组件-->
+    <counter></counter>
   </div>
 </template>
 
@@ -22,6 +25,8 @@
   // 1.导入组件
   import Home from './views/Home'
   import About from './views/About'
+  import Counter from './components/Counter'
+
 export default {
   name: 'App',
 
@@ -29,6 +34,7 @@ export default {
   components:{
     Home,
     About,
+    Counter,
   }
 }
 </script>
