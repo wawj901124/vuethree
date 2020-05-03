@@ -27,6 +27,7 @@ export default new Vuex.Store({
 
     //actions,可以来做异步操作，然后提交给mutations，而后再对state(数据)进行操作
     //异步的方法，需要放在这里
+    //主要处理异步，同步也可以
     actions:{
       //actions中的方法，通过{commit}提交到state中
       //只要是actions中的方法，参数都是{commit},
@@ -42,6 +43,15 @@ export default new Vuex.Store({
       //减函数
       decrement({commit}){
         commit('DECREMENT'); //提交调用mutations中的DECREMENT方法
+      },
+
+      //偶数加1
+      //通过大括号，可以拿到commit,也可以拿到state {commit,state}
+      incrementIfEven({commit,state}){
+        if(state.count % 2 ===0){  //除以2余数恒等于0，则说明是偶数，则运行if中语句
+          commit('INCREMENT');  //提交调用mutations中的INCREMENT方法
+        };
+
       },
     }
 })

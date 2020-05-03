@@ -4,6 +4,7 @@
       <p>点击了{{count}}次</p>
       <button @click="increment">增加+1</button>
       <button @click="decrement">减少-1</button>
+      <button @click="incrementIfEven">偶数+1</button>
     </div>
 </template>
 
@@ -57,6 +58,11 @@
           decrement(){
             //通过this.$store.dispatch('decrement')，调用store.js中的actions中定义的decrement方法
             this.$store.dispatch('decrement');
+          },
+
+          incrementIfEven(){
+            this.$store.dispatch('incrementIfEven');   //调用store.js中的actions中定义的incrementIfEven方法
+
           },
 
         },
