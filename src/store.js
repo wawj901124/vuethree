@@ -51,7 +51,27 @@ export default new Vuex.Store({
         if(state.count % 2 ===0){  //除以2余数恒等于0，则说明是偶数，则运行if中语句
           commit('INCREMENT');  //提交调用mutations中的INCREMENT方法
         };
-
       },
-    }
+
+      //异步函数
+      incrementAsync({commit}){
+        //间隔1秒钟做一个提交
+        //1000，表示间隔1秒
+        //异步，点击后，1秒后才产生结果
+        setTimeout(()=>{
+          commit('INCREMENT');  //提交调用mutations中的INCREMENT方法
+        },1000);
+      },
+    },
+
+    //处理计算属性的
+    //在getters中也可以直接去拿state
+    getters:{
+      //是偶数还是奇数
+      evenOrOdd(state){
+        //如果state.count除以2的余数恒等于0，则返回偶数，否则，返回奇数
+        return state.count % 2 === 0 ? '偶数' : '奇数'
+      },
+
+    },
 })
