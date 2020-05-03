@@ -17,7 +17,8 @@
     <!--<router-view></router-view>-->
 
     <!--3.使用组件-->
-    <counter></counter>
+    <!--<counter></counter>-->
+    <Counter02></Counter02>
   </div>
 </template>
 
@@ -26,6 +27,7 @@
   import Home from './views/Home'
   import About from './views/About'
   import Counter from './components/Counter'
+  import Counter02 from  './components/Counter02'
 
 export default {
   name: 'App',
@@ -35,6 +37,7 @@ export default {
     Home,
     About,
     Counter,
+    Counter02,
   }
 }
 </script>
