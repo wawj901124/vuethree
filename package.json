@@ -1,5 +1,5 @@
 {
-  "name": "vuestudy",
+  "name": "vuethree",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "wawj901124 <wawj900805>",
@@ -14,6 +14,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "pubsub-js": "^1.8.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.3.0"

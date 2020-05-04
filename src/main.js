@@ -3,15 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import store from './store'   //导入store
+import store from './store/index'  //导入store,使用分离的，模块化的store
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
   store,   //在new Vue中使用
+  router,
   components: { App },
   template: '<App/>'
 })

@@ -1,4 +1,4 @@
-# vuestudy
+# vuethree
 
 > A Vue.js project
 
