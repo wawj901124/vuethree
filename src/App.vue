@@ -17,6 +17,8 @@
   import ProjectList from './components/ProjectList'
   import ProjectFooter from './components/ProjectFooter'
 
+  import axios from 'axios';
+
   export default {
     name: 'App',
 
@@ -30,6 +32,12 @@
     methods:{
       //获取网络数据
       reqData(){
+        axios.get('http://127.0.0.1:8080').then((response)=>{
+          console.log(response);
+        }).catch((error)=>{
+          console.log(error);
+
+        })
 
       },
     },
